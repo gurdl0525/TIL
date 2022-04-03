@@ -114,3 +114,78 @@ EX)
 + 요소 이름 다음에 바로 오는 속성은 요소 이름과<br>속성 사이에 공백이 있어야 되고, 하나 이상의<br>속성들이 있는 경우엔 속성 사이에 공백이 있어야 합니다.
 + 속성 이름 다음엔 등호(=)가 붙습니다.
 + 속성 값은 열고 닫는 따옴표로 감싸야 합니다.
+<br><br>
+
+## \<a>
+#### 요소 중 하나인 \<a> 요소는 "anchor"를 의미하는데<br>닻이 배를 항구로 연결하듯 텍스트를 감싸서 하이퍼링크로 만듭니다.<br>이 요소는 여러 속성을 가질 수 있지만 아래에 있는 두 개가 주로 사용됩니다.
+<br>
+
++ href: 이 속성에는 당신이 연결하고자 하는 웹 주소를 지정합니다.<br>그 예로, href="https://github.com/squall7011"
++ title: title 속성은 링크에 대한 추가 정보를 나타냅니다.<br>그 예로, title="My gIthub homepage".<br>이 내용은 링크 위로 마우스를 옮겼을 때 나타날 것입니다.
++ target: target 속성은 링크가 어떻게 열릴 것인지를 지정합니다.<br>예를 들어, target="_blank" 는 링크를 새 탭에서 보여줍니다.<br>당신이 현재 탭에서 링크를 보여주고싶다면 이 속성을 생략하면 됩니다.
+#### 이 모든 것을 종합해보면
+``` 
+<p>A link to my <a href="https://github.com/squall7011" title="My gIthub homepage" target="_blank">Github</a>.</p>
+```
+-><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A link to my <a href="https://github.com/squall7011" title="My gIthub homepage" target="_blank">Github</a>.</p>
+로 활용할 수 있다.
+
+## 참과 거짓 속성(Bloolean attributes)
+#### 값이 없는 속성이 있을텐데 <br>이를 불 속성이라고 하며,<br>일반적으로 그 속성의 이름과<br>동일한 하나의 값만을 가질 수 있습니다.
++  disabled<br>속성을 양식 입력 요소에 할당하면<br>사용자가 데이터를 입력할 수 없도록<br>비활성화(회색으로 표시) 할 수 있습니다.<br>
+
+EX)
+```
+<input type="text" disabled="disabled">
+```
+-> <input type="text" disabled="disabled">
+
+이를 다음과 같이 줄여쓸 수 있습니다.
+```
+<input type="text" disabled>
+```
+-> <input type="text" disabled>
+<br><br>
+
+## 속성값의 따옴표 생략
+#### 웹을 둘러보면 따옴표가 없는 속성값을 포함한 온갖 이상한 마크업 스타일을 볼 것입니다.<br>어떤 상황에선 이런 것이 허용되지만, 다른 상황에서는 당신의 마크업 형식을 망쳐버립니다.<br>이전에 작성한 코드에서는 href 속성만 있는 기본적인 버전을 작성했습니다.
+```
+<a href=https://github.com/squall7011>My Github profile</a>
+```
+-> &nbsp;&nbsp;&nbsp;&nbsp;<a href=https://github.com/squall7011>My Github profile</a>
+#### 하지만 여기에 title 속성을 추가하면 문제가 발생합니다.
+```
+<a href=https://github.com/squall7011 title=My Github homepage>My Github profile</a>
+```
+-> &nbsp;&nbsp;&nbsp;&nbsp;<a href=https://github.com/squall7011 title=My Github homepage>My Github profile</a>
+#### 위와 같이 겉으로는 문제 없어 보여도<br>실제로 클릭해보면 작동하지 않는 것을 볼 수있다.<br>title 또한 제데로 동작하지 않는 것을 볼 수 있다.
+##### (항상 속성값에 따옴표를 붙여야 합니다. 이런 오류를 피할 수도 있고, 코드의 가독성도 좋아지기 때문입니다.)
+<br><br>
+
+## 작은 따옴표,큰따옴표
+#### 글에서 모든 속성값은 큰 따옴표에 둘러싸여 있는 것을 볼 수 있습니다.<br>하지만 당신은 어떤 사람의 HTML에서 작은 따옴표를 볼 수 있을 것입니다.<br>이 것은 스타일의 문제로, 당신이 좋아하는 방법을 사용하면 됩니다.<br>아래 두 문장은 똑같이 동작합니다.
+```
+<a href="http://www.example.com">A link to my example.</a>
+
+<a href='http://www.example.com'>A link to my example.</a>
+```
+#### 주의해야할 점은 두 개를 섞어 쓰면 안된다는 것입니다. 다음은 잘못 사용한 예입니다
+```
+<a href="https://github.com/squall7011'>A Link My Git Hub.</a>
+```
+#### 만약 한 가지 따옴표를 사용했다면 다른 따옴표로 속성값을 둘러싸서 오류를 방지할 수 있습니다.
+```
+<a href="https://github.com/squall7011" title="Git hub profile">A Link My Git Hub.</a>
+```
+#### 하지만 만약 당신이 따옴표 안에 같은<br>따옴표를 사용하고 싶다면(작은 따옴표든 큰 따옴표든)<br>따옴표를 표시하기 위해서 HTML entities를 사용하면 됩니다.<br><br>
+예를 들어 아래 문장을
+```
+<a href='https://github.com/squall7011' title='Git hub profile'>A Link My Git Hub.</a>
+```
+-> &nbsp;&nbsp;&nbsp;<a href='https://github.com/squall7011' title='Isn't this fun?'>A Link My Git Hub.</a>
+#### 이렇게 바꿔주면 잘 작동합니다.
+```
+<a href='https://github.com/squall7011' title='Git hub profile'>A Link My Git Hub.</a>
+```
+->&nbsp;&nbsp;&nbsp;&nbsp;<a href='https://github.com/squall7011' title='My Git hub profile'>A Link My Git Hub.</a>
+#### title까지 잘 작동하는 걸 볼 수 있습니다.
