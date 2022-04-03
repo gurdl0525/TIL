@@ -189,7 +189,7 @@ EX)
 -> &nbsp;&nbsp;&nbsp;<a href='https://github.com/squall7011' title='My Git hub 'profile'>A Link My Git Hub.</a>
 #### 이렇게 바꿔주면 잘 작동합니다.
 ```
-<a href='https://github.com/squall7011' title='Git hub profile'>A Link My Git Hub.</a>
+<a href='https://github.com/squall7011' title='Git hub &#39;profile'>A Link My Git Hub.</a>
 ```
 ->&nbsp;&nbsp;&nbsp;&nbsp;<a href='https://github.com/squall7011' title='My Git hub &#39;profile'>A Link My Git Hub.</a>
 #### title까지 잘 작동하는 걸 볼 수 있습니다.
