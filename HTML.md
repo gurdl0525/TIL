@@ -106,7 +106,7 @@ EX)
 <br><br>
 
 ## 속성(Attributes)
-#### 요소는 "ed아래와 같이 속성을 가질 수 있습니다.
+#### 요소는 아래와 같이 속성을 가질 수 있습니다.
 ```
 <p class="editor-note">My cat is very grumpy</p>
 ```
