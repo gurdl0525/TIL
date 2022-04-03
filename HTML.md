@@ -184,12 +184,12 @@ EX)
 #### 하지만 만약 당신이 따옴표 안에 같은<br>따옴표를 사용하고 싶다면(작은 따옴표든 큰 따옴표든)<br>따옴표를 표시하기 위해서 HTML entities를 사용하면 됩니다.<br><br>
 예를 들어 아래 문장을
 ```
-<a href='https://github.com/squall7011' title='Git hub profile'>A Link My Git Hub.</a>
+<a href='https://github.com/squall7011' title='Git hub 'profile'>A Link My Git Hub.</a>
 ```
--> &nbsp;&nbsp;&nbsp;<a href='https://github.com/squall7011' title='My Git hub profile'>A Link My Git Hub.</a>
+-> &nbsp;&nbsp;&nbsp;<a href='https://github.com/squall7011' title='My Git hub 'profile'>A Link My Git Hub.</a>
 #### 이렇게 바꿔주면 잘 작동합니다.
 ```
 <a href='https://github.com/squall7011' title='Git hub profile'>A Link My Git Hub.</a>
 ```
-->&nbsp;&nbsp;&nbsp;&nbsp;<a href='https://github.com/squall7011' title='My Git hub profile'>A Link My Git Hub.</a>
+->&nbsp;&nbsp;&nbsp;&nbsp;<a href='https://github.com/squall7011' title='My Git hub &#39;profile'>A Link My Git Hub.</a>
 #### title까지 잘 작동하는 걸 볼 수 있습니다.
