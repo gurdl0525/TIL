@@ -1,6 +1,6 @@
 # HTML
 ## html이란?
-#### (Hypertext Markup Language)<br>하이퍼 텍스트 마크업 언어<br>(프로그래밍 언어는 아니다)<br>하지만 프로그래밍을 할 수 있다. 우리가 보는 웹페이지가<br>어떻게 구조화되어 있는지 브라우저로<br>하여금 알 수 있도록 하는 마크업 언어.<br><br>
+#### (HyperText Markup Language)<br>하이퍼 텍스트 마크업 언어<br>(프로그래밍 언어는 아니다)<br>하지만 프로그래밍을 할 수 있다. 우리가 보는 웹페이지가<br>어떻게 구조화되어 있는지 브라우저로<br>하여금 알 수 있도록 하는 마크업 언어.<br><br>
 
 ### html은 elements로 구성되어 있으며<br>tags는 웹 상의 다른 페이지로 이동하게 하는<br>하이퍼링크 내용들을 생성, 단어강조 의 역할을 합니다.<br><br>
 
@@ -193,3 +193,96 @@ EX)
 ```
 ->&nbsp;&nbsp;&nbsp;&nbsp;<a href='https://github.com/squall7011' title='My Git hub &#39;profile'>A Link My Git Hub.</a>
 #### title까지 잘 작동하는 걸 볼 수 있습니다.
+<br><br>
+
+##  HTML 문서의 구조
+```
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>My test page</title>
+  </head>
+  <body>
+    <p>This is my page</p>
+  </body>
+</html>
+```
+<br>
+
++ \<!DOCTYPE html>
+#### 아래를 보면 \<!DOCTYPE html>문장의 형식은<br>유효한 문서 형식을 나타내는 짧은 문장 입니다.
+```
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+```
+<br>
+
++ \<html>\</html>
+#### html 요소는 전체 페이지의 콘텐츠를<br>포함하며, 기본 요소로도 알려져 있습니다.
+<br>
+
++ \<head>\</head>
+#### \<head>요소는 홈페이지 이용자에게는 보이지 않지만<br>검색 결과에 노출 될 키워드, 홈페이지 설명, <br>CSS 스타일, character setdeclaration 등<br>HTML 페이지의 모든 내용을 담고 있습니다. 
+<br>
+
++ \<meta charset="utf-8">
+#### 이 요소는 HTML 문서의 문자 인코딩 설정을 UTF-8로 지정하는 것이며<br>예시에서 지정한 UTF-8에는 전세계에서 사용되는 언어에 대한<br>대부분의 문자가 포함됩니다. 이 설정을 사용하면 페이지에<br>포함 된 모든 텍스트 내용을 처리 할 수 있습니다.
+##### 이것을 설정하면 나중에 문자 인코딩과 관련된 일부 문제를 피하는 데<br>도움이 될 수 있으므로 문자 인코딩 설정을 꼭 해야 합니다.
+<br>
+
++ \<title>\</title>
+#### \<title> 요소는 페이지 제목이 설정되며 페이지가 로드되는<br>브라우저 탭에 표시되는 제목으로 사용됩니다.
+##### 페이지 제목은 페이지가 책갈피 될 때 페이지를 설명하는 데에도 사용됨.
+<br>
+
++ \<body>\</body>
+#### \<body> 요소에는 텍스트, 이미지, 비디오, 게임, 재생 가능한<br>오디오 트랙 등을 비롯하여 페이지에 표시되는 모든 콘텐츠가 포함됨.
+<br><br>
+
+## HTML 공백
+#### 코드를 짜다 보면 가독성을 위해 많은<br>공백을 코드에 넣고 싶을 때가 있을 겁니다.
+```
+<p>Dogs are silly.</p>
+
+          ||
+
+<p>Dogs        are
+         silly.</p>
+```
+#### TML 요소 내용 내에서 얼마나 많은 공백을 사용하든<br>(하나 이상의 공백 문자를 포함 하거나 줄 바꿈 포함)<br>HTML 파서는 코드를 렌더링 할 때<br>각 공백 시퀀스를 단일 공백으로 줄입니다.
+##### 쉽게 풀어서 설명하자면 스페이스 바 여러번 입력해도<br>스페이스 바 를 하나만 입력한 것과 같아진다는 말 입니다.
+<br><br>
+
+## Entitty references(HTML에 특수 문자 포함)
+#### HTML에서 문자 <,>, "및 &는 특수 문자입니다.<br>HTML구문 자체이기 떄문에 그냥 사용하면 잘못된 문장이 됩니다.<br>다음은 이러한 특수문자를 대체하기위한 문자참조 코드표입니다.
+```
+      <      |      %lt;
+      >      |      %gt;
+      "      |      %quot;
+      '      |      %apos;
+      &      |      %amp;
+```
+#### 아래 예시 하나를 들겠습니다.
+```
+<p>In HTML, you define a paragraph using the <p> element.</p>
+```
+#### 위코드에서 \<p>로 열고 \<p>를 쓴후 \</p>로 닫았습니다.<br>이는 잘못된 문장임을 금방 알 수있습니다.<br>그럼 \<p>를 표현하려면 어떻게 해야 할까요?<br>아래의 예시처러 바꿔주겠습니다.
+```
+<p>In HTML, you define a paragraph using the &lt;p&gt; element.</p>
+```
+#### 먼저 \&lt;는 <를 표현해 주었고 p 그다음 \&gt;로 >를 표현해 주었습니다.<br><br>
+
+## HTML주석
+#### HTML에는 코드에 주석을 작성할 수 있습니다.<br>주석의 목적은 코드에 메모를 포함시켜<br>논리 또는 코딩을 설명 할 수 있도록하는 것입니다.
+### <em>HTML 주석을 쓰려면 특수 마커 <!- 및 ->로<br>주석을 묶습니다. 예를 들면 다음과 같습니다.</em>
+EX)
+```
+<p>I'm not inside a comment</p>
+
+<!-- <p>I am!</p> -->
+```
+-> <p>I'm not inside a comment</p>
+
+<!-- <p>I am!</p> -->
+#### 첫 번째 단락만 출력에 표시됩니다.
