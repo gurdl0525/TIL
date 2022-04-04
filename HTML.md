@@ -11,8 +11,7 @@
 ```
 Hello world nice to meet you
 ```
-만약 이문장을 표시하고 싶다면<br>
-태그중 \<p>로 감싸 엘리먼트 문단으로 명시할 수 있다.
+#### 만약 이문장을 표시하고 싶다면<br>태그중 \<p>로 감싸 엘리먼트 문단으로 명시할 수 있다.
 ```
 <p>Hello world nice to meet you</p>
 ```
@@ -64,7 +63,7 @@ EX)
 <p>Hello world <strong>nice to meet you</strong></p>
 ```
 -> Hello world <strong> nice to meet you</strong> 으로 출력된다.
-##### 아래의 경우 p가 열린후 strong이 열리고<br>p가 닫힌후 strongdl 닫혔기 때문에 잘못된 문장입니다.
+##### 아래의 경우 p가 열린후 strong이 열리고<br>p가 닫힌후 strong이 닫혔기 때문에 잘못된 문장입니다.
 ```
 <p>Hello world <strong>nice to meet you</p></strong>
 ```
@@ -77,13 +76,12 @@ EX)
 <br><br>
 
 ## 블록 레벨 요소(Block level elements)
-#### 블록 레벨 요소는 앞뒤 요소사이에 Line을 하나 만듭니다. 
-예를 들면 
+#### 블록 레벨 요소는 앞뒤 요소사이에 Line을 하나 만듭니다. <br>예를 들면 
 ```
 <p>Hello world</p><p>nice to meet you</p>
 ```
 -> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Hello world<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;nice to meet you</p>
-#### 와 같이 출력됩니다. 엔터를 치지 않아도 줄바끔이 되는 것이죠.<br>블록 레벨 요소는 인라인 요소에 중첩될 수 없습니다.<br>하지만 블록 레벨 요소는 다른 블록 레벨 요소에 중첩될 수 있습니다.<br><br>
+#### 와 같이 출력됩니다. 엔터를 치지 않아도 줄바꿈이 되는 것이죠.<br>블록 레벨 요소는 인라인 요소에 중첩될 수 없습니다.<br>하지만 블록 레벨 요소는 다른 블록 레벨 요소에 중첩될 수 있습니다.<br><br>
 
 ## 인라인 요소(Inline elements)
 #### 항상 블록 레벨 요소내에 포함되어 있습니다.<br>인라인 요소는 문서의 한 단락같은 큰 범위에는 적용될 수 없고<br>문장, 단어 같은 작은 부분에 대해서만 적용될 수 있습니다.
@@ -144,7 +142,7 @@ EX)
 ```
 -> <input type="text" disabled="disabled">
 
-이를 다음과 같이 줄여쓸 수 있습니다.
+#### 이를 다음과 같이 줄여쓸 수 있습니다.
 ```
 <input type="text" disabled>
 ```
@@ -182,7 +180,7 @@ EX)
 <a href="https://github.com/squall7011" title="Git hub profile">A Link My Git Hub.</a>
 ```
 #### 하지만 만약 당신이 따옴표 안에 같은<br>따옴표를 사용하고 싶다면(작은 따옴표든 큰 따옴표든)<br>따옴표를 표시하기 위해서 HTML entities를 사용하면 됩니다.<br><br>
-예를 들어 아래 문장을
+#### 예를 들어 아래 문장을
 ```
 <a href='https://github.com/squall7011' title='Git hub 'profile'>A Link My Git Hub.</a>
 ```
