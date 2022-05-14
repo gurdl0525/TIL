@@ -1,2 +1,2 @@
 # TIL
-### Today I leaned.
+### Today I Leaned.
