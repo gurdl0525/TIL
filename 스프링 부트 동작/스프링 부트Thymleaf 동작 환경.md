@@ -44,7 +44,7 @@ public class HelloController {
 따라서 리턴값에 의해 hello.html을 찾아야하는데<br>스프링 부트는 html을 찾을때
 <span style="color:#fff5b1">템플릿 아래에서 찾는다</span>.
 
-![템플릿](%ED%85%9C%ED%94%8C%EB%A6%BF.png)
+![템플릿](%EC%82%AC%EC%A7%84%20%ED%8F%B4%EB%8D%94%5C%ED%85%9C%ED%94%8C%EB%A6%BF.png)
 
 따라서 템플릿 폴더 안에 있는 hello.html을 찾는다.
 
@@ -69,7 +69,7 @@ public class HelloController {
  
 data의 실제값은 spring!!으로 지정해 주었기 때문에, 실제 출력 결과를 보면
 
-![로컬 호스트](%EB%A1%9C%EC%BB%AC%20%ED%98%B8%EC%8A%A4%ED%8A%B8.png)
+![로컬 호스트](%EC%82%AC%EC%A7%84%20%ED%8F%B4%EB%8D%94%5C%EB%A1%9C%EC%BB%AC%20%ED%98%B8%EC%8A%A4%ED%8A%B8.png)
 
 
 data대신 <span style="color:#fff5b1">data의 실제값(spring!!)이 출력</span>된다. 이와같은 html을 변환시켜주는걸 viewResolver가 하게된다.<br>
@@ -78,9 +78,6 @@ data대신 <span style="color:#fff5b1">data의 실제값(spring!!)이 출력</sp
 ---
 
 ## 마지막으로 정리
-
-![예시사진 1](%EC%98%88%EC%8B%9C%EC%82%AC%EC%A7%84%20(1).png)
-
 1. 웹브라우저가 로컬호스트8080/hello를 보낸다<br>
 2. 내장 톰켓 서버를 거쳐서 해당 컨트롤러가 있는지 확인<br>
 3. 만약 있다면 해당 컨트롤러로 이동<br>
