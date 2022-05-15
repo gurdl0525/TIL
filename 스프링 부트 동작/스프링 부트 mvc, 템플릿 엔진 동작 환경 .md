@@ -15,6 +15,23 @@ templates아래에 있는 hello-template.html 검색.<br>hello-template이 있�
 
 ---
 
+한가지 예를 들자면
+![로컬호스트(2)](%EC%82%AC%EC%A7%84%20%ED%8F%B4%EB%8D%94%5C%EB%A1%9C%EC%BB%AC%ED%98%B8%EC%8A%A4%ED%8A%B8(2).png)
+localhost:8080/hello-mvc를 입력했을땐 오류가 걸린다.<br>이는 컨트롤러의 Request요청을 무시했기 때문인데<br>다음과 같이 고쳐주면 정상 작동한다.
+
+---
+
+![로컬호스트(3)](%EC%82%AC%EC%A7%84%20%ED%8F%B4%EB%8D%94%5C%EB%A1%9C%EC%BB%AC%ED%98%B8%EC%8A%A4%ED%8A%B8(3).png)
+이는 Reqiest요청에 name=hello!!라고 답했기 때문에<br>name값이 hello!!가 됨과 동시에 모델값이 hello!!가 된다.
+
+---
+
+따라서 다음과 같이 바꾸어주면
+![로컬호스트(4)](%EC%82%AC%EC%A7%84%20%ED%8F%B4%EB%8D%94%5C%EB%A1%9C%EC%BB%AC%ED%98%B8%EC%8A%A4%ED%8A%B8(4).png)
+hello!!가 아닌 안녕하세요가 출력되는것을 볼수 있다.
+
+---
+
 ## 마지막 총정리
 
 1. 웹 브라우저 에서 localhost:8080/hello-mvc요청
