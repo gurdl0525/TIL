@@ -51,6 +51,74 @@ SQL또한 3가지 갈래로 나뉜다.
 
 ---
 
+명령어를 배우기 전에 docker 실행을 해야 명령어를 사용할 수 있기 때문에<br>docker를 실행 시켜보자. 먼저 cmd창을 킨다.<br>그 다음 아래 명령어로  MySQL Docker 이미지를 다운로드한다.
+```
+docker pull mysql   
+```
+위와 같이 다운로드 하게 되면 자동으로 최신버전으로 다운받게 된다.<br>따라서 버전을 지정해 주고 싶으면 아래 명령어를 사용한다.
+```
+docker pull mysql:버전
+```
+이미지를 다 다운받았으면 생성 및 실행을 해보자
+```
+docker run --사용자가 사용할 이름 mysql-container -e MYSQL_ROOT_PASSWORD=사용자가 사용할 비번 -d -p 3306:3306 mysql:latest
+```
+다음은 컨테이나 시작과 중지하는 법이다. 
++ 시작 명령어
+```
+docker start mysql-container
+```
++ 중지 명령어
+```
+docker stop mysql-container
+```
++ 재시작 명령어
+```
+docker restart mysql-container
+```
+
+---
+
+그 다음은 컨테이너에 접속하는 명령어이다.
+```
+docker exec -it mysql-container bash
+```
+를쳐주면 아래 상태가 된다.
+```
+docker exec -it mysql-container bash
+root@dc557b92f573:
+```
+다음과 같이 쳐준다.
+```
+docker exec -it mysql-container bash
+root@dc557b92f573:/# mysql -u root -p
+```
+그럼 또 다음과 같은 상태가 된다.
+```
+docker exec -it mysql-container bash
+root@dc557b92f573:/# mysql -u root -p
+Enter password:
+```
+이때 생성 및 실행 단계에서 설정했던 비밀번호를 쳐주면 된다.<br>그럼 다음과 같이 준비가 완료된다.
+```
+docker exec -it mysql-container bash
+root@dc557b92f573:/# mysql -u root -p
+Enter password:
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 9
+Server version: 8.0.22 MySQL Community Server - GPL
+
+Copyright (c) 2000, 2020, Oracle and/or its affiliates. All rights reserved.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+```
+
+---
+
 ## INSERT 명령어
 ```
 INSERT INTO 테이블 (컬럼A, 컬럼B) VALUES(컬럼A에 넣을 데이터, 컬럼B에 넣을 데이터);
@@ -61,7 +129,7 @@ INSERT INTO 테이블 (컬럼A, 컬럼B) VALUES(컬럼A에 넣을 데이터, 컬
 
 ![테이블](%EC%A0%9C%EB%AA%A9%20%EC%97%86%EC%9D%8C.png)
 
-이때 행 즉 가로축을 튜플이라 부르고, 세로축을 속성이라 부른다.<br>즉 특정 객체의 인스턴스값의 모임이다. ex):A에 대한 인스턴스 = A, 남자, 17<br>속성은 성별이나 나이등 인스턴스값만의 모임이다. ex)성별의 도메인 = 남자, 여자
+이때 행 즉  <span style="color:orange">가로축</span>을  <span style="color:orange">튜플</span>이라 부르고,  <span style="color:#34FF56">세로축</span>을  <span style="color:#34FF56">속성이</span>라 부른다.<br>즉 특정 객체의 인스턴스값의 모임이다. ex):A에 대한 인스턴스 = A, 남자, 17<br>속성은 성별이나 나이등 인스턴스값만의 모임이다. ex)성별의 도메인 = 남자, 여자
 
 ![테이블(2)](%ED%85%8C%EC%9D%B4%EB%B8%94(2).png)
 
@@ -98,7 +166,7 @@ DELETE FROM 테이블 WHERE 조건문
 
 ---
 
-이때까지 table란걸 계속 적었는데 우린 아직 table을 만드는 법을 모른다.<br>따라서 table을 CURD하는 명령어에 대해 알아보자.
+우린 지금까지 table란걸 계속 적었는데 우린 아직 table을 만드는 법을 모른다.<br>따라서 테이블을 만드는 명령어에 대해 알아보자. 
 
 ## 테이블 생성
 먼저 쿼리는 아래 구조로 이루어져 있다.
