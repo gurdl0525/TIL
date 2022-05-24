@@ -171,10 +171,10 @@ DELETE FROM 테이블 WHERE 조건문
 ## 테이블 생성
 먼저 쿼리는 아래 구조로 이루어져 있다.
 ```
-CREATE TABLE 테이블이름 {
-    컬럼명1 DATATYPE ,
-    컬럼명2 DATATYPE ,
-    컬럼명3 DATATYPE 
+CREATE TABLE `테이블이름` {
+    `컬럼명1` DATATYPE ,
+    `컬럼명2` DATATYPE ,
+    `컬럼명3` DATATYPE 
 };
 ```
 주의할 점이 있는데
