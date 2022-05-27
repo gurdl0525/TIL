@@ -1,7 +1,81 @@
-# MYSQL-명렁어
+# DB-명렁어
 <br>&nbsp;
 
-# TABLE 명령어
+# docker
++ docker 이미지 불러오기
+```
+docker pull mysql   
+```
+위와 같이 다운로드 하게 되면 자동으로 최신버전으로 다운받게 된다.<br>따라서 버전을 지정해 주고 싶으면 아래 명령어를 사용한다.
+```
+docker pull mysql:버전
+```
++ MySQL(DB) 실행
+```
+docker run --사용자가 사용할 이름 mysql-container -e MYSQL_ROOT_PASSWORD=사용자가 사용할 비번 -d -p 3306:3306 mysql:latest
+```
++ 컨테이너 시작 명령어
+```
+docker start mysql-container
+```
++ 컨테이너 중지 명령어
+```
+docker stop mysql-container
+```
++ 컨테이너 재시작 명령어
+```
+docker restart mysql-container
+```
+
+---
++ 컨테이너 접속
+```
+docker exec -it mysql-container bash
+```
+
+<img src="%ED%99%94%EC%82%B4%ED%91%9C.png" width="150" height="150">
+
+```
+docker exec -it mysql-container bash
+root@dc557b92f573:
+```
+<img src="%ED%99%94%EC%82%B4%ED%91%9C.png" width="150" height="150">
+
+```
+docker exec -it mysql-container bash
+root@dc557b92f573:/# mysql -u root -p
+```
+
+<img src="%ED%99%94%EC%82%B4%ED%91%9C.png" width="150" height="150">
+
+```
+docker exec -it mysql-container bash
+root@dc557b92f573:/# mysql -u root -p
+Enter password:
+```
+
+mysql실행 때 설정한 비밀번호 입력
+
+<img src="%ED%99%94%EC%82%B4%ED%91%9C.png" width="150" height="150">
+
+```
+docker exec -it mysql-container bash
+root@dc557b92f573:/# mysql -u root -p
+Enter password:
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 9
+Server version: 8.0.22 MySQL Community Server - GPL
+
+Copyright (c) 2000, 2020, Oracle and/or its affiliates. All rights reserved.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+```
+
+# DDL
 ## 테이블 생성(CREATE)
 ```
 CREATE TABLE `테이블 이름`(
@@ -44,7 +118,7 @@ DROP TABLE `테이블 이름`;
 ```
 
 ---
-# CRUD 명령어
+# DML
 ## INSERT
 ```
 INSERT INTO `테이블 이름`(컬럼1, 컬럼2) VALUES (컬럼1에 넣을 값, 컬럼2에 넣을 값);
