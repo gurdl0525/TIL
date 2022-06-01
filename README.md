@@ -1,3 +1,2 @@
 # TIL
-### Today I Leaned.
-![Anurag's GitHub RepoCard](https://github-readme-repocard.vercel.app/api?username=gurdl0525&show_icons=true&theme=jolly)
+[![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=anuraghazra&theme=jolly&repo=github-readme-stats)](https://github.com/anuraghazra/github-readme-stats)
