@@ -1,10 +1,9 @@
 # Swift Class와 Structe비교
 
----
-
-![Untitled](Swift%20Class%E1%84%8B%E1%85%AA%20Structe%E1%84%87%E1%85%B5%E1%84%80%E1%85%AD%2023267af761c543ccb43b4e22ae8f90ab/Untitled.png)
+![struct-class](image/struct-class.png)
 
 <aside>
+
 🪄 **공통점**
 
 ---
@@ -15,12 +14,13 @@
 - 초기 상태를 설정할 수 있는 `initializer` 정의
 - 특정한 종류의 표준 기능을 제공하기 위한 프로토콜 순응(conform)
 </aside>
+<br>
 
-### 차이점 ⚗️
+## 차이점 ⚗️
 
----
-
+<br>
 <aside>
+
 🔥 **클래스만 가능한 기능**
 
 ---
@@ -30,6 +30,8 @@
 - 🍮 Deinitializers : 할당된 자원을 해제(free up) 시킴
 - 📮 Reference counting : 클래스 인스턴스에 하나 이상의 참조가 가능
 </aside>
+
+<br>
 
 ### Definition Syntax 🍨
 
@@ -43,6 +45,7 @@ struct SomeStructure {
     // 구조체 내용은 여기에
 }
 ```
+<br>
 
 ### Class and Structure Instances 🦐
 
@@ -52,6 +55,7 @@ struct SomeStructure {
 let someResolution = Resolution()    // 구조체 인스턴스 생성
 let someVideoMode = VideoMode()    // 클래스 인스턴스 생성
 ```
+<br>
 
 ### Accessing Properties 🐬
 
@@ -97,6 +101,7 @@ print("The num of someClass is now \(someClass.someStructure.num)")
 > 
 > 위  `someClass.someStructure.num = 1280`처럼 someStructure 전체 값 설정
 > 
+<br>
 
 ### Memberwise Initializers for Structure Types 🎻
 
@@ -105,6 +110,7 @@ print("The num of someClass is now \(someClass.someStructure.num)")
 ```swift
 let st = SomeStructure(num: 640)
 ```
+<br>
 
 ### Structures and Enumerations Are Value Types 🍳
 
@@ -131,6 +137,8 @@ print("hd is still \(hd.num)")
 ```
 
 이는 열거형도 마찬가지 입니다
+
+<br>
 
 ### Classes Are Reference Types 🐙
 
