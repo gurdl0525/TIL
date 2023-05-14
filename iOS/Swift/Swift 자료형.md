@@ -89,8 +89,6 @@ someFloat = 3
 
 ‼️ **Double**
 
----
-
 **64비트 실수형**
 
 ```swift
