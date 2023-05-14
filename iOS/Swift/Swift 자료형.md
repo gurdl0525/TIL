@@ -201,6 +201,7 @@ someAnyObject = nil // 컴파일 오류
 ![SwiftCollectionType](image/SwiftCollectionType.png)
 
 <aside>
+<br>
 
 🗂️ **Array**
 
@@ -244,6 +245,7 @@ print(integers.count) // 0
 </aside>
 
 <aside>
+<br>
 
 📚 **Dictionary**
 
@@ -279,6 +281,7 @@ anyDictionary["someKey"] = nil
 </aside>
 
 <aside>
+<br>
 
 📐 **Set**
 
