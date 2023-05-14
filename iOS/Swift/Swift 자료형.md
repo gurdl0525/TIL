@@ -5,8 +5,6 @@
 <br>
 
 ## 상수와 변수
-
----
 > **var** = kotlin의 var (가변, 변수)
 **let** = kotlin의 val (불변, 상수)
 >
