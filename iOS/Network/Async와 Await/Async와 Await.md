@@ -117,6 +117,7 @@ func processImageData() async throws -> Image {
   return imageResult
 }
 ```
+<br>
 
 ### **🍮 Async, Await를 처리하는 내부 원리**
 
