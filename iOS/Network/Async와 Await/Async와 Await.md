@@ -18,7 +18,7 @@
     import UIKit
     
     // DispatchQueue 사용한 비동기 처리
-    DispatchQueue.main.async {
+    DispatchQueue.global.async {
     
     }
     
